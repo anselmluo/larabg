@@ -16,3 +16,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+//使用引入文件前
+//Route::group(['prefix'=>'admin','namespace'=>'Admin'],function(){
+//    Route::get('index','IndexController@index')->name('index');
+//});
+//使用引入文件后
+include base_path('routes/admin/admin.php');
